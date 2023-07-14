@@ -22,7 +22,7 @@ def get_config():
 def load_model():
     ## donwload the model (if it is not exist it'll download otherwise it dose not)
     dl.download_model('kasreh_ezafeh', process_func=dl._unzip_process_func)
-    
+
     args = get_config()
 
     prefix = str(Path(__file__).parent.absolute()).replace('models', '')
