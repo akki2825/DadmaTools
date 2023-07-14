@@ -40,5 +40,5 @@ def kasreh_ezafe(ner_pipeline, text):
 
     ent2tag = {'LABEL_0': 'KASREH', 'LABEL_1':'N-KASREH'}
     ner_resp = ner_pipeline(text)
-    output = [{'tag':ent2tag[item['entity']], 'word':item['word']} for item in ner_resp]
+    output = [{'tag':ent2tag[item['entity']]} for item in ner_resp]
     return output
